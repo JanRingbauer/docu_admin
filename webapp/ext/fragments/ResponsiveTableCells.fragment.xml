@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+    <ObjectStatus icon="{= ${Published} ? ${MoxisState/UiIcon} : 'sap-icon://disconnected'}" tooltip="{= ${Published} ? ${MoxisState/MoxisDesc} : ${i18n>entity.local}}" state="None"/>
+    <Link text="{FileName}"/>
+    <HBox>
+        <Button icon="sap-icon://attachment" type="Ghost"/>
+        <Button icon="sap-icon://doc-attachment" type="Ghost"/>
+        <Button icon="sap-icon://syntax" type="Ghost"/>
+    </HBox>
+    <VBox>
+        <ObjectStatus icon="sap-icon://connected" state="Success" text="Moxis" visible="{Published}"/>
+            <Button class="sapUiSmallMarginEnd" visible="{= !${Published}}" icon="sap-icon://connected" text="hochladen" type="Emphasized" press="onHochladenButtonPress"/>
+    </VBox>
+</core:FragmentDefinition>

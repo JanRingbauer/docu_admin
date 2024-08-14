@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+    <Column id="stateColumn" width="3%">
+        <Text/>
+        <customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;CustomColumn1&quot;, &quot;leadingProperty&quot;: &quot;Published&quot;, &quot;columnIndex&quot;: &quot;0&quot;}"/>
+        </customData>
+    </Column>
+    <Column id="documentColumn" width="20%">
+        <Text text="Dokument"/>
+        <customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;CustomColumn1&quot;, &quot;leadingProperty&quot;: &quot;FileName&quot;, &quot;columnIndex&quot;: &quot;3&quot;}"/>
+        </customData>
+    </Column>
+    <Column id="buttonColumn" width="10%">
+        <Text text="Infos"/>
+        <customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;CustomColumn1&quot;, &quot;columnIndex&quot;: &quot;4&quot;}"/>
+        </customData>
+    </Column>
+    <Column id="moxisColumn" width="10%">
+        <Text text="In MOXIS hochladen"/>
+        <customData>
+            <core:CustomData key="p13nData" value="\{&quot;columnKey&quot;: &quot;CustomColumn1&quot;, &quot;leadingProperty&quot;: &quot;Published&quot;, &quot;columnIndex&quot;: &quot;8&quot;}"/>
+        </customData>
+    </Column>
+</core:FragmentDefinition>

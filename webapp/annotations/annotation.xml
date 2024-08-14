@@ -1,0 +1,58 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/docu/UI_O2_SERVICE_DOCJOB/$metadata">
+        <edmx:Include Namespace="cds_xdocuxui_service_docjob" />
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="cds_xdocuxui_service_docjob.DOCJOBType">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>FileName</PropertyPath>
+                        <PropertyPath>JobDescription</PropertyPath>
+                        <PropertyPath>BeginDate</PropertyPath>
+                        <PropertyPath>EndDate</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="JobTitle" />
+                            <PropertyValue Property="Label" String="Title" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="JobDescription" />
+                            <PropertyValue Property="Label" String="Beschreibung" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="BeginDate" />
+                            <PropertyValue Property="Label" String="Gültig von" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="EndDate" />
+                            <PropertyValue Property="Label" String="Gültig bis" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record Type="UI.HeaderInfoType">
+                        <PropertyValue Property="TypeName" String="MOXIS" />
+                        <PropertyValue Property="TypeNamePlural" String="Detail Page" />
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="JobTitle" />
+                            </Record>
+                        </PropertyValue>
+                        <PropertyValue Property="Description">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Value" Path="JobDescription" />
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
